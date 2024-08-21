@@ -1,10 +1,21 @@
-# News Site
+# Peak news
 
-Replace this readme with your own information about the project. You can include things like:
+Description:
 
-- Brief description of the assignment
-- How you approached the task, what tools and techniques you used, and how you planned it
-- If you had more time, what would be next?
+"Peak News" is a website designed for a week project for Technigo Bootcamp aiming to create a responsive news website. "Peak news" showcases climbing news and articles using modern web design techniques, specifically CSS Grid and Flexbox.
+
+Approach & Planning:
+
+1. Understanding Requirements
+2. Wireframing
+3. Designing
+
+Tools and Techniques:
+
+1. HTML & CSS
+2. CSS Grid: Layout of the articles
+3. Flexbox: Header and Footer
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
