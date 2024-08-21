@@ -12,7 +12,6 @@ header {
   align-items: center; /*vertically center header items*/
 }
 
-/* Target the h2 inside the main section */
 main section h2 {
   font-size: 46px; /* large font*/
   font-weight: bold;
@@ -21,77 +20,69 @@ main section h2 {
   padding-top: 10px;
 }
 
-section img {
-  display: block; /* block for better layout-control - responsiveness */
-  max-width: 100%; /* Image scales to fit container */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /*centered horizontically, vertical offset, blur radius*/
-  border-radius: 10px; /* Rounded corners */
-}
-
 header div {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically centers items */
 }
 
 header h1 {
-  margin-left: 15px;
+  margin-left: 15px; /* Space between logo and title */
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
+  display: flex; /* Horizontal menu layout */
+  list-style: none; /* Removes bullet points/numbers */
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 20px; /* Space between menu items */
 }
 
 nav ul li a {
-  text-decoration: none;
+  text-decoration: none; /* Removes underline from links */
   color: #333;
   font-weight: bold;
   font-size: 19px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover */
 }
 
-/* General button styling */
 button {
-  background-color: #5f6367; /* Background color */
+  background-color: #5f6367;
   color: white; /* Text color */
   border: none; /* Remove default border */
   border-radius: 5px; /* Rounded corners */
   padding: 10px 20px; /* Vertical and horizontal padding */
-  font-size: 16px; /* Font size */
+  font-size: 16px;
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
   text-align: center; /* Center text inside the button */
 }
 
-/* Hover effect */
 button:hover {
   background-color: #343638; /* Darker background on hover */
   transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
-/* Focus state */
-button:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a custom focus outline */
-}
-
+/* Climbing milestone box*/
 main section:first-of-type {
   display: flex;
   background-color: white;
   margin: 20px 0;
   padding: 20px;
   border-radius: 5px;
+  padding-left: 20px;
 }
 
 main section:first-of-type img {
-  width: 50%;
+  display: block; /* block for better layout-control - responsiveness */
+  /* max-width: 100%;  Confusing part */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* centered horizontally 0, under box 4, blurry 8 */
+  border-radius: 10px;
+
+  width: 50%; /* Confusing part*/
 }
 
 main section:first-of-type div {
@@ -100,7 +91,9 @@ main section:first-of-type div {
 
 main section:last-of-type {
   display: grid;
-  grid-template-columns: repeat(4, 4fr); /* 4 columns*/
+  grid-template-columns: repeat(4, 4fr); /* 4 columns, */
+  /*each column takes up 4parts of the available space. */
+  /* meaning each column is the same width. */
   gap: 20px; /* gap between columns */
 }
 
@@ -112,8 +105,8 @@ article {
 
 article img {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: 100%; /* Confusing part*/
+  max-width: 100%; /*Confusing part*/
   height: 200px;
   min-height: 200px; /* Fixed height for consistency */
   object-fit: cover; /* Crop or zoom the image to fit */
@@ -126,20 +119,23 @@ article h3 {
   margin-bottom: 10px;
 }
 
-/* Base Footer Styles */
+article h3:hover {
+  text-decoration: underline;
+}
+
 footer {
-  background-color: #343638; /* Dark background for footer */
-  color: white; /* White text color */
-  padding: 20px; /* Padding around footer content */
-  text-align: center; /* Center-align text in the footer */
+  background-color: #343638;
+  color: white;
+  padding: 20px;
+  text-align: center;
   margin-top: 20px;
   border-radius: 5px;
 }
 
 .footer-content {
-  display: flex; /* Use Flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center-align items horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-content p {
@@ -150,9 +146,9 @@ footer {
 .footer-content ul {
   list-style: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
-  margin: 10px 0 0; /* Margin for spacing between paragraphs and list */
-  display: flex; /* Use Flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping of list items */
+  margin: 10px 0 0; /* Margin between 2024 and list */
+  display: flex;
+  flex-wrap: wrap; /* wrapping of list items */
   justify-content: center; /* Center-align list items horizontally */
 }
 
@@ -167,23 +163,29 @@ footer {
 }
 
 .footer-content a:hover {
-  text-decoration: underline; /* Ensure no underline on hover */
+  text-decoration: underline;
 }
 
-/* Responsive Styles */
+/* ------------------------------------Media Queries--------------------------------------- */
+/* -----------------------------------------------------------------------------------------*/
+
+/*--first-of-type Grid--*/
+/* desktop screen */
 @media (max-width: 1200px) {
   main section:last-of-type {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, take 1 part */
   }
 }
 
+/*--first-of-type Flex--*/
+/* mobiles and tablets */
 @media (max-width: 768px) {
   main section:first-of-type {
     flex-direction: column;
   }
 
   main section:first-of-type img {
-    width: 100%;
+    width: 100%; /* Confusing with max-width */
   }
 
   main section:first-of-type div {
@@ -195,9 +197,10 @@ footer {
   }
 }
 
+/* mobiles */
 @media (max-width: 480px) {
   main section:last-of-type {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column for mobile devices */
   }
 
   header {
