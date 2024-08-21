@@ -10,7 +10,7 @@ Approach & Planning:
 2. Wireframing
 3. Designing
 
-Tools and Techniques:
+Tools & Techniques:
 
 1. HTML & CSS
 2. CSS Grid: Layout of the articles
