@@ -108,15 +108,14 @@ body {
     padding: 20px;
 } */
 
-.top-news-child img {
+/* .top-news-child img {
     width: 440px;
     height: 350px;
     border-radius: 5px;
     max-width: 100%;
     /* object-fit: cover; */
-}
 
-.news-card-parent {
+*/ .news-card-parent {
     width: 90%;
     margin: 0 auto;
     display: grid;
