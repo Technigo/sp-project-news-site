@@ -18,7 +18,7 @@ header {
   color: white; /* White text */
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 12px 0; /* Adds padding above and below the ticker content */
+  padding: 14px 0; /* Adds padding above and below the ticker content */
   border-radius: 5px;
 }
 
@@ -26,7 +26,7 @@ header {
 .ticker {
   display: inline-block;
   white-space: nowrap;
-  animation: ticker 10s linear infinite;
+  animation: ticker 20s linear infinite;
 }
 
 /* Individual ticker items */
@@ -36,15 +36,21 @@ header {
   font-size: 1rem;
 }
 
+.ticker-separator {
+  display: inline-block;
+  padding: 0 0.5em;
+  color: white;
+  font-size: 10px;
+}
 /* continuous scrolling effect, moving content from right to left. */
 @keyframes ticker {
   /* 0% marks the start of the animation */
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   /* 100% marks the end of the animation */
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
