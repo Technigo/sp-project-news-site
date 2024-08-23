@@ -6,29 +6,28 @@ body {
     background-color: #d3f6d1;
     width: 100%;
     height: 200px;
-    display: grid;
-    grid-template-rows: 3fr 2fr;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
 }
 
 .logo {
-    width: 60%;
+    width: 65%;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
+    margin-top: 20px;
 }
 
 .taco-button {
     background-color: transparent;
     border: none;
-    padding: none;
-    margin: 0;
-    cursor: pointer;
-    outline: none;
+
 }
 
 .taco-button:hover {
@@ -51,6 +50,7 @@ body {
     background-color: #e3a829;
     height: 45px;
     margin-top: 60px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,6 +63,7 @@ body {
     text-decoration: none;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .navbar-item {
@@ -90,6 +91,17 @@ body {
     text-decoration: none;
 
 }
+
+.hamburger {
+    width: 60px;
+}
+
+.hamburger-item {
+    background: #50b355;
+    height: 6px;
+    margin: 6px;
+}
+
 
 .top-news-card {
     background-color: #50b355;
@@ -125,6 +137,7 @@ body {
     height: 100%;
     border-radius: 5px;
     max-width: 100%;
+    max-height: 100%;
 }
 
 .news-card-parent {
@@ -159,6 +172,143 @@ body {
     height: 100%;
     border-radius: 5px;
 
+}
+
+@media (max-width:699px) {
+
+    /* for mobile  */
+    /* breakpoint with font-size at ca 400px */
+    .header {
+        height: 50%;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+        gap: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .taco-button {
+        display: none;
+    }
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .top-news-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .top-news-child img {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .top-news-child:first-child {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .top-news-child p {
+        display: none;
+    }
+
+    .news-card-parent {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+
+    /* for tablets */
+    .logo {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .top-news-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+        /* Changed direction using flexbox so that the picture comes first  */
+    }
+
+    .top-news-child img {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .top-news-child:first-child {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .top-news-child p {
+        display: none;
+    }
+
+    .news-card-parent {
+        width: 100%;
+    }
+
+}
+
+@media (min-width:1100px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    /* wide screen */
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* make logo in the center
+    make font-size: bigger in top-newscard  */
 }
 
 .footer {
