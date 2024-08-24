@@ -198,8 +198,8 @@ footer {
 
 .footer-content ul {
   list-style: none; /* Remove default list styling */
-  padding: 10px;
-  margin: 10px 0 10px 0; /* Margin between 2024 and list */
+  padding: 0 10px;
+  margin: 0 0 10px 0; /* Margin between 2024 and list */
   display: flex;
   flex-wrap: wrap; /* wrapping of list items */
   justify-content: center; /* Center-align list items horizontally */
