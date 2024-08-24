@@ -1,0 +1,258 @@
+html {
+  background: #dcdad7;
+  color: #fff;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(24, 23, 23)
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+
+  background-color: cadetblue;
+  padding: 10px 40px;
+}
+
+.logo img {
+  width: 300px;
+  padding: 12px 5px;
+}
+
+h1 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(117, 115, 115);
+}
+
+p1 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(67, 66, 66);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  padding: 10;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  border: 2px rgb(67, 66, 66);
+}
+
+.flex-parent {
+  display: block;
+  border: 3px solid rgba(0, 0, 0, 0.571);
+  padding: 20px 20px;
+  margin: 40px;
+  content: 30px;
+  background-color: rgba(205, 244, 255, 0.16);
+}
+
+
+h2 {
+  display: line;
+  height: 40px;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  border-bottom: 2px solid #00000052;
+  font-size: 20px;
+  text-align: left;
+  background-color: antiquewhite;
+  width: 700px;
+  color: darkblue;
+}
+
+.flex-childh2 {
+  display: contents;
+  height: 40px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(117, 115, 115) border-radius: 5px;
+  padding: 50px;
+  margin: 20px 20px;
+  justify-content: space-evenly;
+  font-weight: 10px;
+  width: 100px;
+  column-count: 2;
+  float: left;
+  background-color: #fff;
+  color: black;
+  border: 3px solid black;
+  text-align: left;
+  background-color: antiquewhite;
+  width: 400px;
+}
+
+
+
+.flex-childh3 {
+  display: contents;
+  height: 40px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(117, 115, 115) border-radius: 5px;
+  padding: 50px;
+  margin: 20px 20px;
+  justify-content: space-evenly;
+  font-weight: 10px;
+  width: 100px;
+  column-count: 2;
+  float: :right;
+  background-color: #fff;
+  color: black;
+  text-align: left;
+  background-color: antiquewhite;
+  width: 600px;
+}
+
+
+.flex-parent-2 {
+  display: block;
+  border: 3px solid rgba(0, 0, 0, 0.571);
+  padding: 20px 20px;
+  margin: 40px;
+  content: 60px;
+  background-color: rgba(205, 244, 255, 0.16);
+}
+
+.h1 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(117, 115, 115);
+}
+
+.flex-childh4 {
+  display: contents;
+  height: 40px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(117, 115, 115) border-radius: 5px;
+  padding: 70px;
+  margin: 20px 20px;
+  justify-content: space-evenly;
+  font-weight: 10px;
+  width: 100px;
+  column-count: 2;
+  float: :right;
+  background-color: #fff;
+  color: black;
+  text-align: left;
+  background-color: antiquewhite;
+  width: 600px;
+}
+
+.flex-childh5 {
+  display: contents;
+  height: 40px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(117, 115, 115) border-radius: 5px;
+  padding: 70px;
+  margin: 20px 20px;
+  justify-content: space-evenly;
+  font-weight: 10px;
+  width: 100px;
+  column-count: 2;
+  float: :right;
+  background-color: #fff;
+  color: black;
+  text-align: left;
+  background-color: antiquewhite;
+  width: 600px;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  body {
+    background-color: lightgreen;
+  }
+
+}
+
+@media (min-width: 900px) {
+  body {
+    background-color: cadetblue;
+  }
+
+}
+
+footer {
+  background-color: cadetblue;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-content {
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+.footer-content h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin: 0 40px;
+}
+
+.socials a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+  color: grey;
+}
