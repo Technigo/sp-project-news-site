@@ -18,4 +18,4 @@ Tools & Techniques:
 
 
 ## View it live
-https://peaknews-climbing-news-at-its-peak.netlify.app/
+https://peak-news.netlify.app/
