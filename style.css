@@ -3,14 +3,14 @@ body {
   background-color: #f4f4f4;
   color: #333; /* text color */
   margin: 0; /* removes default margin*/
-  padding: 20px; /* adds padding aaround the entire page*/
+  padding: 18px 20px; /* adds padding around the entire page*/
 }
 
 header {
   display: flex; /*flexbox layout*/
   justify-content: space-between; /*space out header items*/
   align-items: center; /*vertically center header items*/
-  padding: 20px 0;
+  padding: 0px 0 20px 0;
 }
 
 .ticker-wrap {
@@ -142,8 +142,7 @@ main section:first-of-type div {
 
 main section:last-of-type {
   display: grid;
-  grid-template-columns: repeat(4, 4fr); /* 4 columns, */
-  /*each column takes up 4parts of the available space. */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns, */
   /* meaning each column is the same width. */
   gap: 20px; /* gap between columns */
 }
@@ -157,9 +156,7 @@ article {
 article img {
   display: block;
   width: 100%; /* Confusing part*/
-  max-width: 100%; /*Confusing part*/
   height: 200px;
-  min-height: 200px; /* Fixed height for consistency */
   object-fit: cover; /* Crop or zoom the image to fit */
   border-radius: 5px;
   margin-bottom: 15px;
@@ -201,15 +198,15 @@ footer {
 
 .footer-content ul {
   list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
-  margin: 10px 0 0; /* Margin between 2024 and list */
+  padding: 10px;
+  margin: 10px 0 10px 0; /* Margin between 2024 and list */
   display: flex;
   flex-wrap: wrap; /* wrapping of list items */
   justify-content: center; /* Center-align list items horizontally */
 }
 
 .footer-content li {
-  margin: 0 10px; /* Space between list items */
+  margin: 5px 10px; /* Space between list items */
 }
 
 .footer-content a {
@@ -229,7 +226,7 @@ footer {
 /* desktop screen */
 @media (max-width: 1200px) {
   main section:last-of-type {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns, take 1 part */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, take 1 part */
   }
 }
 
@@ -241,7 +238,7 @@ footer {
   }
 
   main section:first-of-type img {
-    width: 100%; /* Confusing with max-width */
+    width: 100%; /* max-width ?*/
   }
 
   main section:first-of-type div {
