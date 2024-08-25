@@ -20,7 +20,7 @@ Responsiveness: The site was designed to be responsive across devices, with "cus
 - If you had more time, what would be next?
 
 - I would have liked to create a custom logo.
-- I would have liked the links in the navigation bar to direct back to the main page
+- i would have likes to add some subpages to link the navigation-bar
 - I also would have liked to make the images uniform in size.
 I would have liked the font size to be more responsive, adjusting more smoothly between small screens and larger ones, so it wouldn't appear too small in mobile mode.
 -  I struggled with the responsiveness and media queries, With more time, I would have liked to ajust the media queries for more precise breakpoints and better responsiveness.
