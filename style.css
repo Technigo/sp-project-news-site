@@ -78,6 +78,7 @@ nav ul {
 
 nav ul li {
   margin-left: 20px; /* Space between menu items */
+  margin-top: 10px;
 }
 
 nav ul li a {
@@ -132,7 +133,7 @@ main section:first-of-type img {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* centered horizontally 0, under box 4, blurry 8 */
   border-radius: 10px;
   max-width: 100%;
-  min-width: 50%; /* Confusing part*/
+  min-width: 50%; /* img breaks without min-width */
   height: auto;
 }
 
@@ -222,7 +223,7 @@ footer {
 /* ------------------------------------Media Queries--------------------------------------- */
 /* -----------------------------------------------------------------------------------------*/
 
-/*--first-of-type Grid--*/
+/*--last-of-type Grid--*/
 /* desktop screen */
 @media (max-width: 1200px) {
   main section:last-of-type {
@@ -230,23 +231,14 @@ footer {
   }
 }
 
-/*--first-of-type Flex--*/
-/* mobiles and tablets */
+/* tablets */
 @media (max-width: 768px) {
   main section:first-of-type {
     flex-direction: column;
   }
 
-  main section:first-of-type img {
-    width: 100%; /* max-width ?*/
-  }
-
-  main section:first-of-type div {
-    padding-left: 0;
-  }
-
   main section:last-of-type {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
   }
 }
 
@@ -263,11 +255,5 @@ footer {
 
   nav ul {
     flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-top: 10px;
   }
 }
