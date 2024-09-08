@@ -1,0 +1,264 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333; /* text color */
+  margin: 0; /* removes default margin*/
+  padding: 18px 20px; /* adds padding around the entire page*/
+}
+
+header {
+  display: flex; /*flexbox layout*/
+  justify-content: space-between; /*space out header items*/
+  align-items: center; /*vertically center header items*/
+  padding: 0px 0 20px 0;
+}
+
+.ticker-wrap {
+  background-color: #343638; /* Dark background for contrast */
+  color: white; /* White text */
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 14px 0; /* Adds padding above and below the ticker content */
+  border-radius: 5px;
+}
+
+/* Ticker content */
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+}
+
+/* Individual ticker items */
+.ticker-item {
+  display: inline-block;
+  padding: 0 1.5em; /* Adds more space between ticker items */
+  font-size: 1rem;
+}
+
+.ticker-separator {
+  display: inline-block;
+  padding: 0 0.5em;
+  color: white;
+  font-size: 10px;
+}
+/* continuous scrolling effect, moving content from right to left. */
+@keyframes ticker {
+  /* 0% marks the start of the animation */
+  0% {
+    transform: translateX(0);
+  }
+  /* 100% marks the end of the animation */
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+header div {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+}
+
+/* logo image*/
+header div img {
+  display: block;
+  max-width: 100%;
+  width: 70px;
+  height: auto;
+}
+
+header h1 {
+  margin-left: 15px; /* Space between logo and title */
+}
+
+nav ul {
+  display: flex; /* Horizontal menu layout */
+  list-style: none; /* Removes bullet points/numbers */
+  padding: 0; /* remove any padding */
+  margin: 0; /* remove default margin */
+  max-width: 100%; /* prevent overflow */
+  overflow-x: hidden; /* hides horizontal scroll */
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin-left: 20px; /* Space between menu items */
+  margin-top: 10px;
+}
+
+nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: #333;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+button {
+  background-color: #343638;
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  font-size: 16px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  text-align: center; /* Center text inside the button */
+}
+
+button:hover {
+  background-color: #0c0c0c; /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+main section h2 {
+  font-size: 40px; /* large font*/
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0; /* Adds space above and below the heading */
+  padding-top: 10px;
+}
+
+/* Climbing milestone box*/
+main section:first-of-type {
+  display: flex;
+  background-color: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+
+main section:first-of-type img {
+  display: block; /* block for better layout-control - responsiveness */
+  /* max-width: 100%;  Confusing part */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* centered horizontally 0, under box 4, blurry 8 */
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 50%; /* img breaks without min-width */
+  height: auto;
+}
+
+main section:first-of-type div {
+  padding-left: 20px;
+}
+
+main section:last-of-type {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns, */
+  /* meaning each column is the same width. */
+  gap: 20px; /* gap between columns */
+}
+
+article {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+article img {
+  display: block;
+  width: 100%; /* Confusing part*/
+  height: 200px;
+  object-fit: cover; /* Crop or zoom the image to fit */
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article a {
+  text-decoration: none;
+  color: #333;
+}
+
+article h3 {
+  margin-bottom: 10px;
+}
+
+article h3:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #343638;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Font size for copyright text */
+}
+
+.footer-content ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0 10px;
+  margin: 0 0 10px 0; /* Margin between 2024 and list */
+  display: flex;
+  flex-wrap: wrap; /* wrapping of list items */
+  justify-content: center; /* Center-align list items horizontally */
+}
+
+.footer-content li {
+  margin: 5px 10px; /* Space between list items */
+}
+
+.footer-content a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make link text bold */
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------Media Queries--------------------------------------- */
+/* -----------------------------------------------------------------------------------------*/
+
+/*--last-of-type Grid--*/
+/* desktop screen */
+@media (max-width: 1200px) {
+  main section:last-of-type {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, take 1 part */
+  }
+}
+
+/* tablets */
+@media (max-width: 768px) {
+  main section:first-of-type {
+    flex-direction: column;
+  }
+
+  main section:last-of-type {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+}
+
+/* mobiles */
+@media (max-width: 480px) {
+  main section:last-of-type {
+    grid-template-columns: 1fr; /* Single column for mobile devices */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
