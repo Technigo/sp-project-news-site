@@ -7,16 +7,20 @@ background: #2D3142;
 */
 
 .container {
+  /* 1 column mobile first */
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
-    "nav nav nav"
-    "main main main"
-    "sidebar content1 content2"
-    "sidebar content3 content4"
-    "footer footer footer";
+    "nav"
+    "main"
+    "sidebar"
+    "content1"
+    "content2"
+    "content3"
+    "content4"
+    "footer";
   grid-gap: 10px;
 }
 
@@ -29,6 +33,14 @@ main {
   background: orange;
   grid-area: main;
 }
+
+main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 
 .sidebar {
   background: greenyellow;
@@ -60,17 +72,36 @@ footer {
   grid-area: footer;
 }
 
-@media only screen and (max-width: 550px) {
+@media (min-width: 768px) {
+
+  /* two columns for tablets */
   .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-template-areas:
       "nav nav"
-      "sidebar main"
-      "sidebar main"
-      "content1 content2"
-      "content3 content4"
+      "main main"
+      "sidebar content1"
+      "sidebar content2"
+      "sidebar content3"
+      "sidebar content4"
       "footer footer";
+
+  }
+}
+
+@media (min-width: 1024px) {
+
+  /* four columns for tablets */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "nav nav nav nav"
+      "main main main main"
+      "sidebar sidebar content1 content2"
+      "sidebar sidebar content3 content4"
+      "footer footer footer footer";
 
   }
 }
