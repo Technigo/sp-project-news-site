@@ -1,10 +1,7 @@
-/* color palete
-background: #2D3142;
-#BFC0C0
-#FFFFFF
-#EF8354
-#4F5D75
-*/
+html {
+  background-color: #2D3142;
+  color: #4F5D75;
+}
 
 .container {
   /* 1 column mobile first */
@@ -25,8 +22,10 @@ background: #2D3142;
 }
 
 nav {
-  background: green;
+  background: #BFC0C0;
   grid-area: nav;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul {
@@ -36,25 +35,25 @@ nav ul {
   justify-items: center;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  background-color: #000;
-  width: 90%;
-  text-align: center;
-  line-height: 50px;
-
+  text-align: justify;
+  padding: 0;
+  width: 100%;
 }
 
 nav ul li a {
   text-decoration: none;
-  background-color: #000;
-  padding: 10px;
-  color: white;
+  padding: 0px 0;
+  color: #EF8354;
+  display: block;
+  height: auto;
 }
 
 main {
-  background: orange;
+  background: #BFC0C0;
   grid-area: main;
 }
 
@@ -66,50 +65,75 @@ main img {
   margin: 0 auto;
 }
 
-main p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2em;
-  font-weight: bold;
-  /* optional */
-  background-color: rgba(0, 0, 0, 0.75);
-  /* halbtransparenter Hintergrund für bessere Lesbarkeit */
-  padding: 10px;
-  text-align: center;
-}
-
 
 
 .sidebar {
-  background: greenyellow;
+  background: #BFC0C0;
   grid-area: sidebar;
 }
 
 .content1 {
-  background: yellowgreen;
+  background: #BFC0C0;
   grid-area: content1;
 }
 
+.content1 h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.content1 p {
+  padding: 0px;
+  margin: 0px;
+}
+
 .content2 {
-  background: yellow;
+  background: #BFC0C0;
   grid-area: content2;
 }
 
+.content2 h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.content2 p {
+  padding: 0px;
+  margin: 0px;
+}
+
 .content3 {
-  background: plum;
+  background: #BFC0C0;
   grid-area: content3;
 }
 
+.content3 h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.content3 p {
+  padding: 0px;
+  margin: 0px;
+}
+
 .content4 {
-  background: pink;
+  background: #BFC0C0;
   grid-area: content4;
 }
 
+.content4 h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.content4 p {
+  padding: 0px;
+  margin: 0px;
+}
+
 footer {
-  background: olivedrab;
+  background: #BFC0C0;
   grid-area: footer;
 }
 
@@ -127,7 +151,6 @@ footer {
       "sidebar content3"
       "sidebar content4"
       "footer footer";
-
   }
 }
 
@@ -154,19 +177,17 @@ footer {
     list-style-type: none;
     margin: 0;
   }
-  
+
   nav ul li {
-    background-color: #000;
     width: 90%;
     text-align: center;
-    line-height: 75px;
-  
+    font-size: 20px;
+
   }
-  
+
   nav ul li a {
     text-decoration: none;
-    background-color: #000;
-    padding: 10px;
-    color: white;
+    padding: 0;
+    color: #EF8354;
   }
 }
