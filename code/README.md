@@ -27,4 +27,4 @@ I would have liked the font size to be more responsive, adjusting more smoothly 
 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://tacotimes.netlify.app
