@@ -79,22 +79,12 @@ main {
   width: 100vw;
 }
 
-
+/* Here we start of with the hero section of the news site */
 .big-news {
   position: relative;
-  /* background-color: #dfd3c9; */
   display: inline-block;
   margin-bottom: 0px;
   background-color: #A1B0C2;
-
-  /* display: flex;
-  flex-direction: column;
-  
-  align-items: center; */
-  /* this makes the bx shadow */
-  /* box-shadow: 2px 2px 4px 2px black; */
-  /* this rounds the corners */
-  /* border-radius: 20px; */
 }
 
 img {
@@ -102,6 +92,7 @@ img {
   width: 100%;
 
 }
+
 
 img.logo {
   width: 50px;
@@ -118,12 +109,14 @@ img.logo {
 
 }
 
+/* I want the text to be on top of the image for mobile */
 .text-container {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(223, 211, 201, 0.1);
+  /* background-color: rgba(223, 211, 201, 0.5); */
+  background-color: rgba(47, 65, 86, 0.5);
   color: #dfd3c9;
   /* color: rgb(47, 65, 86); */
   padding: 0px 10px;
@@ -142,6 +135,8 @@ img.logo {
   margin-bottom: 0px;
 }
 
+
+/* This is a little section between the news sections to allow for the scallaped edge */
 .divider {
   /* height: 100px; */
   width: auto;
@@ -154,10 +149,7 @@ img.logo {
 
 .divider-text {
   width: auto;
-  /* background-color: #A1B0C2; */
   background-color: rgb(47, 65, 86);
-  /* color: rgb(47, 65, 86); */
-  /* color: #A1B0C2; */
   color: #DFD3C9;
   text-align: center;
   text-transform: uppercase;
@@ -167,6 +159,7 @@ img.logo {
   margin: 0px 0px;
 }
 
+/* This makes the wave/scalloped edge pattern */
 .wave {
   --size: 10px;
   --R: calc(var(--size)*1.28);
@@ -186,6 +179,7 @@ img.logo {
 
 }
 
+/* for it to be flipped I needed to completely rename it */
 .wave-flipped {
   --size: 10px;
   --R: calc(var(--size)*1.28);
@@ -205,7 +199,7 @@ img.logo {
 }
 
 
-
+/* Here we have the medium articles */
 .medium-news {
   background-color: rgb(47, 65, 86);
   /* background-color: #A1B0C2; */
@@ -300,10 +294,6 @@ img.logo {
 
 }
 
-.fliped {
-  transform: rotate(180deg);
-}
-
 /* FOOTER */
 footer {
   background-color: rgb(47, 65, 86);
@@ -321,4 +311,160 @@ footer {
 
 .foot-writing {
   color: #A1B0C2;
+}
+
+/* Some of the hover effects */
+.foot-links:hover {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+/* Now it needs to be adapted for tablet and desktop */
+
+
+
+/* here is the desktop */
+@media (min-width: 667px) {
+  /* changes for the tablet and desktop */
+  /* first the header */
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    padding-right: 20px;
+  }
+
+  .desktop-nav a {
+    color: #A1B0C2;
+    font-family: "Raleway", serif;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    padding-top: 5px;
+  }
+
+  /* Now the hero section */
+  .big-news {
+    display: grid;
+    max-height: 200 px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* gap: 10px; */
+    /* margin: 20px 0px 0px 100px; */
+
+  }
+
+  .big-news a {
+    /* grid-area: ; */
+    grid-column: span 2;
+    grid-row: span 3;
+    /* position: static; */
+
+  }
+
+  .main-img {
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .text-container {
+
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-color: rgb(47, 65, 86);
+    padding: 20px;
+    /* margin: 100px 100px 100px 100px; */
+    margin: 0px 0px;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .main-p {
+    font-size: 24px;
+  }
+
+  /* leaving the divider as is for now */
+  /* Now the medium articles */
+  .medium-news {
+    display: flex;
+  }
+
+  .medium-article {
+    width: 50%;
+  }
+
+  .medium-title {
+    font-size: 24px;
+  }
+
+  /* now the little articles */
+  .little-news {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 10px;
+
+
+  }
+
+  .little-article {
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+  }
+
+  .little-text-container {
+    width: 50%;
+    /* height: 30px; */
+    margin: 0px;
+    text-align: center;
+  }
+
+  .little-article a {
+    width: 80%;
+    height: 80%;
+
+  }
+
+
+  .little-title {
+    font-size: 24px;
+  }
+
+  /* adjusting font size of the dividers */
+
+  .divider-text {
+    font-size: 30px;
+  }
+
+  .divider-text-little {
+    font-size: 24px;
+  }
+
+
+
 }
