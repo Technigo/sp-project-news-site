@@ -1,4 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
-  background: #0025ff;
+  background: rgb(47, 65, 86);
   color: #fff;
+
+
+}
+
+body {
+  margin: 0px 0px;
+}
+
+h1 {
+  font-family: "Raleway", serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Raleway", serif;
+}
+
+
+p {
+  font-family: "Raleway", serif;
+  /* color: #A1B0C2; */
+  color: #DFD3C9;
+}
+
+/* First we do the header as we know we build mobile first */
+header {
+  background-color: rgb(47, 65, 86);
+  margin: 0;
+  padding: 0;
+  /* Something is up here with the width? maybe it is the images */
+  width: 100vw;
+  /* height: 4.5rem; */
+
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/* Mobile nav bar is visible first */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 72px;
+
+}
+
+.menu-line {
+  width: 50px;
+  height: 5px;
+  fill: #dfd3c9;
+  background-color: #dfd3c9;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* Now its time to style the main website */
+
+main {
+  background-color: rgb(47, 65, 86);
+  /* background-color: #A1B0C2; */
+  width: 100vw;
+}
+
+/* Here we start of with the hero section of the news site */
+.big-news {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0px;
+  background-color: #A1B0C2;
+}
+
+img {
+  /* height: 366px; */
+  width: 100%;
+
+}
+
+
+img.logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.big-news.main-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* object-fit: scale-down; */
+
+
+}
+
+/* I want the text to be on top of the image for mobile */
+.text-container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: rgba(223, 211, 201, 0.5); */
+  background-color: rgba(47, 65, 86, 0.5);
+  color: #dfd3c9;
+  /* color: rgb(47, 65, 86); */
+  padding: 0px 10px;
+  /* font-size: 20px; */
+  text-align: left;
+  border-radius: 20px;
+  width: 90%;
+  /* display: flex; */
+}
+
+.main-title {
+  margin: 0px 0px;
+}
+
+.main-p {
+  margin-bottom: 0px;
+}
+
+
+/* This is a little section between the news sections to allow for the scallaped edge */
+.divider {
+  /* height: 100px; */
+  width: auto;
+  /* margin-top: 100px; */
+  /* background-color: #A1B0C2; */
+  background-color: rgb(47, 65, 86);
+  margin-top: 0px;
+  /* margin-bottom: 10px; */
+}
+
+.divider-text {
+  width: auto;
+  background-color: rgb(47, 65, 86);
+  color: #DFD3C9;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.divider h2 {
+  margin: 0px 0px;
+}
+
+/* This makes the wave/scalloped edge pattern */
+.wave {
+  --size: 10px;
+  --R: calc(var(--size)*1.28);
+
+  -webkit-mask:
+    radial-gradient(var(--R) at 50% calc(1.8*var(--size)), #000 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(-.8*var(--size)), #0000 99%, #000 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+  background: #A1B0C2;
+  /* background: #BFD0E0; */
+  /* background: rgb(47, 65, 86); */
+  /*linear-gradient(90deg, red, blue); */
+  height: 40px;
+  width: 100vw;
+  /* maring: 15px; */
+  /* position: absolute; */
+  /* bottom: 10%; */
+
+}
+
+/* for it to be flipped I needed to completely rename it */
+.wave-flipped {
+  --size: 10px;
+  --R: calc(var(--size)*1.28);
+
+  -webkit-mask:
+    radial-gradient(var(--R) at 50% calc(1.8*var(--size)), #000 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(-.8*var(--size)), #0000 99%, #000 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+  background: #A1B0C2;
+  /* background: rgb(47, 65, 86); */
+  /*linear-gradient(90deg, red, blue); */
+  height: 40px;
+  width: 100vw;
+  transform: rotate(180deg);
+  /* maring: 15px; */
+  /* position: absolute; */
+  /* bottom: 10%; */
+}
+
+
+/* Here we have the medium articles */
+.medium-news {
+  background-color: rgb(47, 65, 86);
+  /* background-color: #A1B0C2; */
+  margin-top: 10px;
+}
+
+.medium-article {
+  background-color: rgba(223, 211, 201, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.medium-article img {
+  border-radius: 20px;
+
+}
+
+.medium-title {
+  margin: 2px 25px;
+  /* color: #A1B0C2; */
+  color: #DFD3C9;
+
+}
+
+.medium-p {
+  margin: 0px 25px;
+  /* color: #A1B0C2; */
+  color: #DFD3C9;
+}
+
+/* Here is the last section with the small articles */
+.divider-text-little {
+  background-color: #A1B0C2;
+  color: rgb(47, 65, 86);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.little-news {
+  display: flex;
+  flex-direction: column;
+  background-color: #A1B0C2;
+  margin-top: 0px;
+}
+
+.little-article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 5px 10px;
+  height: 33%
+}
+
+.little-text-container {
+  width: 50%;
+
+}
+
+.little-title {
+  font-family: "Raleway", serif;
+  font-size: 20px;
+  color: rgb(47, 65, 86);
+  text-align: left;
+
+
+
+}
+
+.little-article a {
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+
+.little-news img {
+  display: block;
+  width: 100%;
+  /* height: auto; */
+  /* object-fit: scale-down; */
+  border-radius: 20px;
+
+
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(47, 65, 86);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.foot-links {
+  /* display: none; */
+  margin-right: 10px;
+}
+
+.foot-writing {
+  color: #A1B0C2;
+}
+
+/* Some of the hover effects */
+.foot-links:hover {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+/* Now it needs to be adapted for tablet and desktop */
+
+
+
+/* here is the desktop */
+@media (min-width: 667px) {
+  /* changes for the tablet and desktop */
+  /* first the header */
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    padding-right: 20px;
+  }
+
+  .desktop-nav a {
+    color: #A1B0C2;
+    font-family: "Raleway", serif;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    padding-top: 5px;
+  }
+
+  /* Now the hero section */
+  .big-news {
+    display: grid;
+    max-height: 200 px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* gap: 10px; */
+    /* margin: 20px 0px 0px 100px; */
+
+  }
+
+  .big-news a {
+    /* grid-area: ; */
+    grid-column: span 2;
+    grid-row: span 3;
+    /* position: static; */
+
+  }
+
+  .main-img {
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .text-container {
+
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-color: rgb(47, 65, 86);
+    padding: 20px;
+    /* margin: 100px 100px 100px 100px; */
+    margin: 0px 0px;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .main-p {
+    font-size: 24px;
+  }
+
+  /* leaving the divider as is for now */
+  /* Now the medium articles */
+  .medium-news {
+    display: flex;
+  }
+
+  .medium-article {
+    width: 50%;
+  }
+
+  .medium-title {
+    font-size: 24px;
+  }
+
+  /* now the little articles */
+  .little-news {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 10px;
+
+
+  }
+
+  .little-article {
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+  }
+
+  .little-text-container {
+    width: 50%;
+    /* height: 30px; */
+    margin: 0px;
+    text-align: center;
+  }
+
+  .little-article a {
+    width: 80%;
+    height: 80%;
+
+  }
+
+
+  .little-title {
+    font-size: 24px;
+  }
+
+  /* adjusting font size of the dividers */
+
+  .divider-text {
+    font-size: 30px;
+  }
+
+  .divider-text-little {
+    font-size: 24px;
+  }
+
+
+
 }
